@@ -12,7 +12,7 @@ int binarySearch(int tab[], int szukana){
           if (tab[sr] == szukana)
              return sr;
              
-          if (tab[sr] > szukana)
+          else if (tab[sr] > szukana)
              p = sr - 1;
           else
               l = sr + 1;
@@ -22,13 +22,17 @@ return -1;
 
 int main(){
     int tab[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47};
-    int szukana = 19;
+    int szukana;
+    
+    cout << "Podaj liczbe ktora chcesz znalezc: ";
+    cin >> szukana;
+    
     int wynik = binarySearch(tab, szukana);
     
     if (wynik != -1)
-       cout << "Element znaleziony na pozycji: " << wynik << endl;
+       cout << "Liczba " << szukana << " wystepuje w zbiorze w komorce o indeksie: " << wynik << endl;
     else
-        cout << "Element nie znaleziony." << endl;
+        cout << "Liczba nie znaleziona" << endl;
     
     return 0;
 }
