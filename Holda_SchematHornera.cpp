@@ -25,5 +25,5 @@ int main(){
 	cout << "Podaj argument: ";
 	cin >> x;
 	int wynik = funkcja(wsp, st, x);
-	cout << "W(1) = " << wynik << endl;
+	cout << "W(" << x << ")= " << wynik << endl;
 }
